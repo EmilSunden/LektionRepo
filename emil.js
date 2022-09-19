@@ -1,24 +1,55 @@
 const prompt = require('prompt-sync')();
+/*let snabbMakaronerGramPerDl = 50 
+let portioner = 1
+// Till 1 dl pasta behöver du + snabbMakaronerGramPerDl + "g"
 
-const songLyric = () => {
-    let lyric = prompt("His palms are sweaty, knees weak, arms are: ");
-    while (lyric !== "heavy" ){
-        if (lyric !== "heavy"){
-            lyric = prompt("That's not the right word I'm looking for! Try again: ");
-        } else {
-            console.log("That's exactly the word I'm looking for! ");
-            break;   
-        }
-    };
+const kokaMakaroner = () => {
+    koka = prompt("Vill du koka pasta? ")
 
-    let momsWhat = prompt("There's vomit on his sweater already, mom's: ")
-    while (momsWhat !== "spaghetti"){
-        if (momsWhat !== "spaghetti" ){
-            momsWhat = prompt("That's definetly not the right word! Try again: ")
-        } else {
-            console.log(`Moms ${momsWhat} indeed!`)
-            break;
-        }
+    if (koka !== "ja") {
+        console.log("Okej, hejdå! ")
+        return
+    } else {
+        console.log("Bra då kör vi! ")
     }
+
+    let hurMycket = prompt("Hur många deceliter pasta ska vi koka? ")
+    if (hurMycket === "1"){
+        console.log(`Okej! Då kan följande vara bra att veta: 
+${hurMycket} deciliter snabbmakaroner = ${snabbMakaronerGramPerDl} gram `)
+    } else if (hurMycket === "2"){
+        console.log(`Okej! Då behöver vi ${snabbMakaronerGramPerDl * 2} gram pasta`)
+    } else {
+        console.log("Biff!")
+    }
+
+
+}
+kokaMakaroner()*/
+
+
+
+let makaronerGram = 100
+let makaronerDeciliter = makaronerGramPerPortion * 
+
+
+let makaronerLagning = () => {
+    consent = prompt("Först och främst: Känner du för pasta idag? ");
+    if (consent !== "ja") {
+        console.log("Okej bai! ")
+    } else {
+        antalPortion = prompt("Då fortsätter vi! Hur många portioner pasta vill du ha? ")
+    }
+
+   switch (antalPortion){
+    case "1":
+        console.log("Till en portion behöver du " + makaronerGram + " gram pasta")
+    case "2":
+        console.log("Till två portioner behöver du ...")
+    case "3":
+        console.log("Till tre portioner behöver du ...")
+
+   }
+
 };
-songLyric()
+makaronerLagning()
