@@ -31,4 +31,24 @@ function makePasta(portion) {
   }
 }
 
-chef();
+function convertTemp(temp) {
+  let question = prompt(
+    "Do you want to convert to Celcius or Farenheit -> "
+  ).toLowerCase();
+  if (question == "celcius" || question == "c") {
+    let temp = prompt("Enter Farenheit temp to convert -> ");
+    convertFarenheit(temp);
+  } else if (question == "farenheit" || question == "f") {
+    let temp = prompt("Enter Farenheit temp to convert -> ");
+    convertCelcius(temp);
+  }
+}
+
+function convertFarenheit(temp) {
+  console.log("Farenheit hit");
+}
+function convertCelcius(temp) {
+  console.log("Clecius hit");
+}
+// chef();
+convertTemp();
