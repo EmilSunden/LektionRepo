@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')()
-/*
+
 let kokboken = 1;
 kokboken = prompt(`Välkommen till kokboken välj ett alternativ med siffrorna: 
 1. Koka Snabbmakroner
@@ -20,7 +20,7 @@ switch(kokboken){
     case "4" : 
     break;
 }
-*/
+
 
 function kokaMaks(portioner){
     let liter = portioner * 0.5;
