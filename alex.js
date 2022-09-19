@@ -33,28 +33,38 @@ function makePasta(portion) {
 
 function convertTemp(temp) {
   let question = prompt(
-    "Do you want to convert to Celcius or Farenheit -> "
+    "Do you want to convert from Celcius or Farenheit -> "
   ).toLowerCase();
   if (question == "celcius" || question == "c") {
-    let temp = prompt("Enter Farenheit temp to convert -> ");
+    let temp = prompt("Enter Celcius temp to convert -> ");
     while (isNaN(temp)) {
       temp = prompt("Farenheit must be number value! -> ");
     }
-    convertFarenheit(temp);
+    convertToFarenheit(temp);
   } else if (question == "farenheit" || question == "f") {
     let temp = prompt("Enter Farenheit temp to convert -> ");
     while (isNaN(temp)) {
       temp = prompt("Celcius must be number value! -> ");
     }
-    convertCelcius(temp);
+    convertToCelcius(temp);
   }
 }
 
-function convertFarenheit(temp) {
-  console.log("Farenheit hit");
+function convertToFarenheit(temp) {
+  console.log("----Farenheit hit----");
+  let cTemp = temp;
+  let newFarenheit = (cTemp * 9) / 5 + 32;
+  console.log(`${cTemp}\xB0C converts to ${newFarenheit}\xB0F`);
 }
-function convertCelcius(temp) {
-  console.log("Clecius hit");
+
+function convertToCelcius(temp) {
+  console.log("----Celcius hit----");
+  let fTemp = temp;
+  let newCelcius = ((fTemp - 32) * 5) / 9;
+  let result = Math.round(newCelcius * 100) / 100;
+
+  // console.log(`${fTemp}\xB0F converts to ~ ${newCelcius}\xB0C`);
+  console.log(`${fTemp}\xB0F converts to ~ ${result}\xB0C`);
 }
 // chef();
 convertTemp();
