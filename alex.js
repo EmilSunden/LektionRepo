@@ -37,9 +37,15 @@ function convertTemp(temp) {
   ).toLowerCase();
   if (question == "celcius" || question == "c") {
     let temp = prompt("Enter Farenheit temp to convert -> ");
+    while (isNaN(temp)) {
+      temp = prompt("Farenheit must be number value! -> ");
+    }
     convertFarenheit(temp);
   } else if (question == "farenheit" || question == "f") {
     let temp = prompt("Enter Farenheit temp to convert -> ");
+    while (isNaN(temp)) {
+      temp = prompt("Celcius must be number value! -> ");
+    }
     convertCelcius(temp);
   }
 }
