@@ -1,36 +1,9 @@
 const prompt = require('prompt-sync')();
-/*let snabbMakaronerGramPerDl = 50 
-let portioner = 1
+
 // Till 1 dl pasta behöver du + snabbMakaronerGramPerDl + "g"
 
-const kokaMakaroner = () => {
-    koka = prompt("Vill du koka pasta? ")
-
-    if (koka !== "ja") {
-        console.log("Okej, hejdå! ")
-        return
-    } else {
-        console.log("Bra då kör vi! ")
-    }
-
-    let hurMycket = prompt("Hur många deceliter pasta ska vi koka? ")
-    if (hurMycket === "1"){
-        console.log(`Okej! Då kan följande vara bra att veta: 
-${hurMycket} deciliter snabbmakaroner = ${snabbMakaronerGramPerDl} gram `)
-    } else if (hurMycket === "2"){
-        console.log(`Okej! Då behöver vi ${snabbMakaronerGramPerDl * 2} gram pasta`)
-    } else {
-        console.log("Biff!")
-    }
-
-
-}
-kokaMakaroner()*/
-
-
-
-let makaronerGram = 100
-let makaronerDeciliter = makaronerGramPerPortion * 
+let makaronerGram = 50
+let makaronerDeciliterPerPortion = 50 * 0.02
 
 
 let makaronerLagning = () => {
@@ -41,15 +14,19 @@ let makaronerLagning = () => {
         antalPortion = prompt("Då fortsätter vi! Hur många portioner pasta vill du ha? ")
     }
 
-   switch (antalPortion){
-    case "1":
-        console.log("Till en portion behöver du " + makaronerGram + " gram pasta")
-    case "2":
-        console.log("Till två portioner behöver du ...")
-    case "3":
-        console.log("Till tre portioner behöver du ...")
 
-   }
+    if (antalPortion === "1"){
+        console.log(`Till en portion behöver du ${makaronerGram} gram snabbmakaroner vilket är ${makaronerDeciliterPerPortion} deciliter`)
+    } else if (antalPortion === "2"){
+        console.log(`Till två portioner behöver du ${makaronerGram * 2} gram snabbmakaroner vilket är ${makaronerDeciliterPerPortion * 2} deciliter`)
+    } else if (antalPortion === "3"){
+        console.log(`Till tre portioner behöverdu ${makaronerGram * 3} gram snabbmakaroner vilket är ${makaronerDeciliterPerPortion * 3} deciliter`)
+    } else {
+        throw "404 Error"
+    }
+
+   
+
 
 };
 makaronerLagning()
