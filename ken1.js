@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')()
-
-
-const kokboken = prompt(`Välkommen till kokboken välj ett alternativ med siffrorna: 
+/*
+let kokboken = 1;
+kokboken = prompt(`Välkommen till kokboken välj ett alternativ med siffrorna: 
 1. Koka Snabbmakroner
 2. ***inte klart***
 3. ***inte klart***
@@ -17,13 +17,12 @@ switch(kokboken){
     case "3" : kokaMaks();
     break;
 
-    case "4" : break;
+    case "4" : 
+    break;
 }
+*/
 
-
-function kokaMaks(){
-    const portioner = prompt("Hur många portioner snabbmakaroner vill du göra? --> "); // hur många portioner i en prompt
-//console.log(portioner)
+function kokaMaks(portioner){
     let liter = portioner * 0.5;
     let pasta = portioner * 2;
     let salt = portioner * 0.5; 
@@ -36,5 +35,4 @@ i ${pasta} dl pasta och vänta ca 3 min, häll av i ett durkslag och servera,
 bon apitit!`);
 }
 
-
-//kokaMaks()
+kokaMaks(prompt("Hur många portioner snabbmakaroner vill du göra? --> "))
