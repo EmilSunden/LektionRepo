@@ -1,11 +1,23 @@
-const prompt = require('prompt-sync')()
+const prompt = require('prompt-sync')() // problem med prompt-sync biblioteket, stödjer inte /n newline
 
-let kokboken = 1;
-kokboken = prompt(`Välkommen till kokboken välj ett alternativ med siffrorna: 
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+q = `Välkommen till kokboken välj ett alternativ med siffrorna:
 1. Koka Snabbmakroner
 2. ***inte klart***
 3. ***inte klart***
-0. för att avbryta: `);
+0. för att avbryta: 
+--> `;
+
+
+//kokboken = prompt(q);
+
+rl.question(q, function(kokboken) {
+  
 
 switch(kokboken){
     case "1" : kokaMaks();
@@ -22,7 +34,8 @@ switch(kokboken){
 }
 
 
-function kokaMaks(portioner){
+function kokaMaks(){
+    portioner = prompt("Hur många portioner snabbmakaroner vill du göra? --> ")
     let liter = portioner * 0.5;
     let pasta = portioner * 2;
     let salt = portioner * 0.5; 
@@ -31,8 +44,10 @@ Du har valt att göra ${portioner} portioner med pasta,
 
 du behöver fylla en kastrull med ca: ${liter} l vatten, 
 tillsätt ${salt} tsk salt, vänta tills vattnet kokar och häll sedan
-i ${pasta} dl pasta och vänta ca 3 min, häll av i ett durkslag och servera, 
+i ${pasta} dl pasta och vänta ca 3 min, häll av i ett durkslag och servera,
 bon apitit!`);
+
 }
 
-kokaMaks(prompt("Hur många portioner snabbmakaroner vill du göra? --> "))
+rl.close()  // för att stänga readline
+});
