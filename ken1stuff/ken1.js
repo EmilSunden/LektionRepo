@@ -2,12 +2,7 @@
 // Bibliotek //
 
 const prompt = require('prompt-sync')() // problem med prompt-sync biblioteket, stödjer inte /n newline därför den kopierar text hela tiden när man trycker en siffra
-const readlineSync = require('readline-sync');
-const readline = require("readline");
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+
 
 ///////////////////////////////////
 //                               //
@@ -17,15 +12,11 @@ const rl = readline.createInterface({
 
 let loop = 1;
 
-const q = `
-Välkommen till kokboken välj ett alternativ med siffrorna:
-
-1. Koka Snabbmakroner
-2. Måttkonverterare
-3. ***inte klart***
-
-0. för att avbryta: 
---> `;
+const q1 = "\n\n\nVälkommen till kokboken välj ett alternativ med siffrorna:\n\n";
+const q2 = "1. Koka Snabbmakroner\n";
+const q3 = "2. Måttkonverterare\n";
+const q4 = "3. ***inte klart***\n\n";
+const q5 = "0. för att avbryta";
 
 function kokaMaks(){
   portioner = prompt("Hur många portioner snabbmakaroner vill du göra? --> ")
@@ -33,12 +24,15 @@ function kokaMaks(){
   let pasta = portioner * 2;
   let salt = portioner * 0.5; 
   console.log(`
+  ***************************************************************************
   Du har valt att göra ${portioner} portioner med pasta,
   
   du behöver fylla en kastrull med ca: ${liter} l vatten, 
   tillsätt ${salt} tsk salt, vänta tills vattnet kokar och häll sedan
   i ${pasta} dl pasta och vänta ca 3 min, häll av i ett durkslag och servera,
-  bon apitit!`);
+  bon apitit!
+  
+  ***************************************************************************`);
                    }
 
 
@@ -50,8 +44,8 @@ function kokaMaks(){
 
 
 do{
-    var kokboken = readlineSync.question(q)
-
+  console.log(q1 + q2 + q3 + q4 + q5)
+    kokboken = prompt()
     switch(parseInt(kokboken)){
       case 1 : 
         kokaMaks();
@@ -73,17 +67,3 @@ do{
     }; 
 } while(loop > 0)
 
-  
-
-
-
- /*
-// Wait for user's response.
-var userName = readlineSync.question('May I have your name? ');
-console.log('Hi ' + userName + '!');
- 
-// Handle the secret text (e.g. password).
-var favFood = readlineSync.question('What is your favorite food? ', {
-  hideEchoBack: true // The typed text on screen is hidden by `*` (default).
-});
-console.log('Oh, ' + userName + ' loves ' + favFood + '!')*/
