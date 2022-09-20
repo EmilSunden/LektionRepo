@@ -35,7 +35,30 @@ function kokaMaks(){
   ***************************************************************************`);
                    }
 
+function conVolym(){
+  let volym = prompt("skriv antal i liter --> ");
+  let choose = prompt("Vilken prefix vill du veta? (D)eci- / (C)enti- / (M)ililiter --> ").toUpperCase();
 
+  /*
+  deci = volym * 10;
+  centi = volym * 100;
+  mili = volym * 1000;
+  */
+
+    if (choose == "D") {
+      volym = volym * 10;
+      console.log(volym + " dl");
+      } else if (choose == "C") {
+        volym = volym * 100;
+        console.log(volym + " cl");
+        } else if (choose == "M") {
+          volym = volym * 1000;
+          console.log(volym + " ml");
+          } else {
+            console.log("wrong input")
+            }
+
+}
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                           //
 //                            Program                                        //
