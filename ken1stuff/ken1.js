@@ -16,7 +16,7 @@ function kokstart(){
 const q1 = "\n\n\nVälkommen till kokboken välj ett alternativ med siffrorna:\n\n";
 const q2 = "1. Koka Snabbmakroner\n";
 const q3 = "2. Måttkonverterare\n";
-const q4 = "3. ***inte klart***\n\n";
+const q4 = "3. Sneakpeak Array\n\n";
 const q5 = "0. för att avbryta";
 
 console.log(q1 + q2 + q3 + q4 + q5)
@@ -68,7 +68,7 @@ function conVolym(){
 function firstArray(){
   let test = ["audi ", "volvo ", "ford ", "MCB ", "ferrari ", 5];
   console.log(test);                                                         //för att skriva ut alla data från array
-  console.log(test[0] + test[4]);                           // för att skriva ut första och 5e värdet från array test  
+  console.log(test[0] +"& "+ test[4]);                           // för att skriva ut första och 5e värdet från array test  
 }
 
 
