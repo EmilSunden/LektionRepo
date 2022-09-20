@@ -63,6 +63,15 @@ function conVolym(){
             }
 
 }
+
+
+function firstArray(){
+  let test = ["audi ", "volvo ", "ford ", "MCB ", "ferrari ", 5];
+  console.log(test);                                                         //för att skriva ut alla data från array
+  console.log(test[0] + test[4]);                           // för att skriva ut första och 5e värdet från array test  
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                           //
 //                            Program                                        //
@@ -83,7 +92,7 @@ do{
         break;
 
       case 3 :
-        kokaMaks();
+        firstArray();
         break;
 
       case 0 : 
