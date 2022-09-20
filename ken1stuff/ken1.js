@@ -12,11 +12,15 @@ const prompt = require('prompt-sync')() // problem med prompt-sync biblioteket, 
 
 let loop = 1;
 
+function kokstart(){
 const q1 = "\n\n\nVälkommen till kokboken välj ett alternativ med siffrorna:\n\n";
 const q2 = "1. Koka Snabbmakroner\n";
 const q3 = "2. Måttkonverterare\n";
 const q4 = "3. ***inte klart***\n\n";
 const q5 = "0. för att avbryta";
+
+console.log(q1 + q2 + q3 + q4 + q5)
+}
 
 function kokaMaks(){
   portioner = prompt("Hur många portioner snabbmakaroner vill du göra? --> ")
@@ -67,7 +71,7 @@ function conVolym(){
 
 
 do{
-  console.log(q1 + q2 + q3 + q4 + q5)
+  kokstart()
     kokboken = prompt()
     switch(parseInt(kokboken)){
       case 1 : 
